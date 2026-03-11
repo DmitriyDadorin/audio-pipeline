@@ -45,19 +45,10 @@ copy(
   "node_modules/onnxruntime-web/dist/ort-wasm-simd-threaded.wasm",
   "public/vendor/ort-wasm-simd-threaded.wasm",
 );
-
-for (const filename of [
-  "ort-wasm-simd-threaded.mjs",
-  "ort-wasm-simd-threaded.jsep.mjs",
-  "ort-wasm-simd-threaded.jspi.mjs",
-  "ort-wasm-simd-threaded.asyncify.mjs",
-  "ort-wasm-simd-threaded.wasm",
-  "ort-wasm-simd-threaded.jsep.wasm",
-  "ort-wasm-simd-threaded.jspi.wasm",
-  "ort-wasm-simd-threaded.asyncify.wasm",
-]) {
-  copy(`node_modules/onnxruntime-web/dist/${filename}`, `public/ort/${filename}`);
-}
+copy(
+  "node_modules/onnxruntime-web/dist/ort-wasm-simd-threaded.wasm",
+  "public/ort/ort-wasm-simd-threaded.wasm",
+);
 
 console.log("Browser assets synced to public/");
 
